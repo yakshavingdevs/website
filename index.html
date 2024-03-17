@@ -4,127 +4,109 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>yakshaving.xyz - The Yak Shaving Devs</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
     html {
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif;
-    }
-
-    body {
-      background-color: #f6f6f6;
-    }
-
-    p, a {
       font-size: 20px;
     }
 
-    main, section {
+    body {
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif;
+      background-color: #ECEBE5;
+      max-width: 100%;
+    }
+
+    main {
       box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       padding: 16px;
     }
 
-    section {
-      width: 100%;
-      max-width: 900px;
+    h1 {
+      margin-top: 0px;
     }
 
-    section:not(:first-child) {
-      margin: 16px 0 0 0;
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 400;
+      color: #11120d;
     }
 
-    section, article {
-      background-color: #fff;
-      border: 2px solid #ededed;
-      border-radius: 24px;
+    a {
+     font-weight: 600;
+     color: #333e2d;
+     text-decoration: none;
     }
 
-    section.row {
-      padding: 0;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      background: none;
-      border: none;
-    }
-
-    section.row > * {
-      box-sizing: border-box;
-      align-self: stretch;
-      flex: 1;
-      min-width: 442px;
-      margin-right: 16px;
-    }
-
-    @media screen and (max-width: 948px) {
-      section.row > * {
-        margin-right: 0;
-        margin-bottom: 16px;
-      }
+    a:hover {
+      text-decoration: underline;
+      text-decoration-color: #333e2d;
     }
 
     article {
+      background-color: #f7f6f4;
+      border: 2px solid #e1e0d6;
+      border-radius: 24px;
+      margin: 16px 0px;
       padding: 16px;
-    }
-    
-    article:last-child {
-      margin-right: 0px;
     }
 
     article header {
-      border-bottom: 2px solid #ededed;
+      border-bottom: 2px solid #11120d;
     }
 
     article footer {
-      border-top: 2px solid #ededed;
-      padding-top: 16px;
+      padding-top: 8px;
+    }
+
+    .brand-img {
+      width: 500px;
+      max-width: 100%;
     }
   </style>
 </head>
 <body>
   <main>
-    <section>
-      <h1>The Yak Shaving Devs</h1>
-      <img height="300" src="/logo.jpg" alt="A computer geek trimming hair off of a yak's body" title="The Yak Shaving Devs" />
-      <p>We are a developer collective, currently just a team of 2 who are collaborating on some cool projects like the ones below.</p>
-    </section>
-    <section class="row">
-      <article>
-        <header>
-          <h2>Todo</h2>
-        </header>
-        <p><strong>Aim:</strong> To build the best browser-based todo</p>
-        <footer>
-          <a href="https://github.com/yakshavingxyz/todo">GitHub</a>
-          &nbsp;&bull;&nbsp;
-          <a href="https://todo.yakshaving.xyz/">Website</a>
-        </footer>
-      </article>
-      <article>
-        <header>
-          <h2>Datadance</h2>
-        </header>
-        <p><strong>Aim:</strong> To build a simple service that can augment JSONs easily</p>
-        <footer>
-          <a href="https://github.com/yakshavingxyz/datadance">GitHub</a>
-          &nbsp;&bull;&nbsp;
-          <a href="https://datadance.yakshaving.xyz/">Website</a>
-        </footer>
-      </article>
-    </section>
-    <section>
-      <h1>The Team</h1>
-      <a href="https://sri.pravan.me/">Sri Pravan Paturi</a>
-      <br />
-      <a href="https://chiranjeevikarthik.me/">Chiranjeevi Karthik Kuruganti</a>
-      <br />
-    </section>
+    <h1>The Yak Shaving Devs</h1>
+    <img
+      src="/logo.jpg"
+      alt="A computer geek trimming hair off of a yak's body" title="The Yak Shaving Devs"
+      class="brand-img"
+    />
+    <p>
+      We are a developer collective, currently just a team of 2 who are
+      collaborating on some cool projects like the ones below.
+    </p>
+    <h2>Projects</h2>
+    <article>
+      <header>
+        <h3>Todo</h3>
+      </header>
+      <p>The best browser-based todo ever</p>
+      <footer>
+        <a href="https://github.com/yakshavingxyz/todo">GitHub</a>
+        &nbsp;&bull;&nbsp;
+        <a href="https://todo.yakshaving.xyz/">Website</a>
+      </footer>
+    </article>
+    <article>
+      <header>
+        <h3>Datadance</h3>
+      </header>
+      <p>A simple service to augment JSONs easily programmatically</p>
+      <footer>
+        <a href="https://github.com/yakshavingxyz/datadance">GitHub</a>
+        &nbsp;&bull;&nbsp;
+        <a href="https://datadance.yakshaving.xyz/">Website</a>
+      </footer>
+    </article>
+    <h2>The Team</h2>
+    <a href="https://sri.pravan.me/">Sri Pravan Paturi</a>
+    <br><br>
+    <a href="https://chiranjeevikarthik.me/">Chiranjeevi Karthik Kuruganti</a>
+    <br><br>
   </main>
 </body>
 </html>
