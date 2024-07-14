@@ -1,112 +1,185 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>yakshaving.xyz - The Yak Shaving Devs</title>
+  <title>Yak Shaving Devs - An Open Source Developer Collective</title>
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
-    html {
-      font-size: 20px;
+    .coloured {
+      color: var(--pico-color);
     }
 
-    body {
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, sans-serif;
-      background-color: #ECEBE5;
-      max-width: 100%;
-    }
-
-    main {
-      box-sizing: border-box;
-      padding: 16px;
-    }
-
-    h1 {
-      margin-top: 0px;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-      font-weight: 400;
-      color: #11120d;
-    }
-
-    a {
-     font-weight: 600;
-     color: #333e2d;
-     text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-      text-decoration-color: #333e2d;
-    }
-
-    article {
-      background-color: #f7f6f4;
-      border: 2px solid #e1e0d6;
-      border-radius: 24px;
-      margin: 16px 0px;
-      padding: 16px;
-    }
-
-    article header {
-      border-bottom: 2px solid #11120d;
-    }
-
-    article footer {
-      padding-top: 8px;
-    }
-
-    .brand-img {
-      width: 500px;
-      max-width: 100%;
+    #logo {
+      height: 80px;
     }
   </style>
 </head>
+
 <body>
-  <main>
-    <h1>The Yak Shaving Devs</h1>
-    <img
-      src="/logo.jpg"
-      alt="A computer geek trimming hair off of a yak's body" title="The Yak Shaving Devs"
-      class="brand-img"
-    />
-    <p>
-      We are a developer collective, currently just a team of 2 who are
-      collaborating on some cool projects like the ones below.
-    </p>
-    <h2>Projects</h2>
-    <article>
-      <header>
-        <h3>Todo</h3>
-      </header>
-      <p>The best browser-based todo ever</p>
-      <footer>
-        <a href="https://github.com/yakshavingxyz/todo">GitHub</a>
-        &nbsp;&bull;&nbsp;
-        <a href="https://todo.yakshaving.xyz/">Website</a>
-      </footer>
-    </article>
-    <article>
-      <header>
-        <h3>Datadance</h3>
-      </header>
-      <p>A simple service to augment JSONs easily programmatically</p>
-      <footer>
-        <a href="https://github.com/yakshavingxyz/datadance">GitHub</a>
-        &nbsp;&bull;&nbsp;
-        <a href="https://datadance.yakshaving.xyz/">Website</a>
-      </footer>
-    </article>
-    <h2>The Team</h2>
-    <a href="https://sri.pravan.me/">Sri Pravan Paturi</a>
-    <br><br>
-    <a href="https://chiranjeevikarthik.me/">Chiranjeevi Karthik Kuruganti</a>
-    <br><br>
+  <nav class="container">
+    <ul>
+      <li><img src="/img/yakshavingdevs-light-theme-logo.svg" id="logo"></li>
+    </ul>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li>
+        <a href="https://github.com/yakshavingdevs" class="coloured">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-github">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <details class="dropdown" id="theme-select">
+          <summary>
+            Theme
+          </summary>
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="theme-select" value="light" hidden />
+                Light
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-sun">
+                  <circle cx="12" cy="12" r="5"></circle>
+                  <line x1="12" y1="1" x2="12" y2="3"></line>
+                  <line x1="12" y1="21" x2="12" y2="23"></line>
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                  <line x1="1" y1="12" x2="3" y2="12"></line>
+                  <line x1="21" y1="12" x2="23" y2="12"></line>
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="theme-select" value="dark" hidden />
+                Dark
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-moon">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="theme-select" value="system" hidden />
+                System
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-monitor">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </label>
+            </li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </nav>
+  <main class="container">
+    <section id="home" class="grid">
+      <img src="/img/poster.jpg" alt="A computer geek trimming hair off of a yak's body" title="The Yak Shaving Devs">
+      <div style="display: flex; flex-direction: column; justify-content: center;">
+        <h1>
+          Procrastinate with open source contributions
+        </h1>
+        <p>
+          People of the developer realm! Hear ye! Hear ye! Join us today in working on awesome open source projects as a
+          <a href="https://en.wiktionary.org/wiki/yak_shaving">yak shaving</a> activity to ultimately join "The Order Of
+          Linus".
+        </p>
+        <a href="https://github.com/yakshavingdevs" role="button">Contribute Now</a>
+      </div>
+    </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div>
+          <article>
+            <header>Datadance</header>
+            Transforming JSON data using JSON output specification
+            <footer>
+              <a href="https://datadance.app">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-globe">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                  </path>
+                </svg>
+              </a>
+            </footer>
+          </article>
+        </div>
+        <div>
+          <article>
+            <header>Nitya</header>
+            A browser only super app for all your daily habits
+            <footer>
+              <a href="https://nitya.app">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-globe">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                  </path>
+                </svg>
+              </a>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
   </main>
+  <script>
+    (function () {
+      function getCurrentThemeSelection() {
+        if (localStorage.getItem('themeSelection')) {
+          return localStorage.getItem('themeSelection');
+        }
+
+        return 'system';
+      }
+
+      function getCurrentTheme() {
+        var themeSelection = getCurrentThemeSelection();
+        var systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        var currentTheme = (themeSelection === 'system') ? systemTheme : themeSelection;
+
+        return currentTheme;
+      }
+
+      var $themeSelect = document.getElementById("theme-select");
+      $themeSelect.value = getCurrentThemeSelection();
+      document.documentElement.setAttribute("data-theme", getCurrentTheme());
+
+      var $logo = document.getElementById("logo");
+      $logo.src = `/img/yakshavingdevs-${getCurrentTheme()}-theme-logo.svg`;
+
+      document.getElementById("theme-select").addEventListener('change', function (event) {
+        localStorage.setItem('themeSelection', event.target.value);
+        document.documentElement.setAttribute("data-theme", getCurrentTheme());
+        $logo.src = `/img/yakshavingdevs-${getCurrentTheme()}-theme-logo.svg`;
+      });
+    })();
+  </script>
 </body>
+
 </html>
